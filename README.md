@@ -1,7 +1,5 @@
 # Key Defender Pro - Advanced Keystroke Encryption
 
-![Key Defender Pro Logo](https://keydefenderpro.live/logo.png) <!-- Replace with actual logo path -->
-
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Key Features](#key-features)
@@ -61,69 +59,4 @@ git clone https://github.com/yourusername/key-defender-pro.git
 cd key-defender-pro
 Install dependencies:
 
-bash
-npm install
-Set up environment variables:
 
-bash
-cp .env.example .env
-# Edit the .env file with your configuration
-Start the development server:
-
-bash
-npm run dev
-Usage
-Launch the Key Defender Pro application
-
-Configure your security preferences in the settings panel
-
-Enable protection when entering sensitive information
-
-View security reports in the dashboard
-
-For detailed usage instructions, please refer to our User Manual.
-
-Security Features
-Key Defender Pro employs multiple layers of security:
-
-On-the-fly Encryption: Keystrokes are encrypted before they reach the operating system level
-
-Secure Memory Management: Sensitive data is never stored in plain text
-
-Tamper Protection: Detects and prevents attempts to modify the application
-
-Regular Updates: Security patches and feature updates are delivered automatically
-
-Contributing
-We welcome contributions from the community! Please follow these steps:
-
-Fork the repository
-
-Create your feature branch:
-
-bash
-git checkout -b feature/AmazingFeature
-Commit your changes:
-
-bash
-git commit -m 'Add some AmazingFeature'
-Push to the branch:
-
-bash
-git push origin feature/AmazingFeature
-Open a Pull Request
-
-Please read our Contribution Guidelines for more details.
-
-License
-This project is licensed under the GNU General Public License v3.0 - see the LICENSE file for details.
-
-Support
-For support, feature requests, or security concerns, please contact us at:
-
-📧 Email: support@keydefenderpro.live
-🐦 Twitter: @KeyDefenderPro
-💬 Discord: Join our Community
-
-Key Defender Pro - Because every keystroke matters.
-© 2023 Key Defender Pro Team. All rights reserved.

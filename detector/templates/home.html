@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Advanced Keylogger Protection</h1>
+        <p>Detection and prevention system for ultimate security</p>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stat-card">
+        <i class="fas fa-users"></i>
+        <h3>Protected Users</h3>
+        <p id="visitorCount">24</p>
+    </div>
+    <div class="stat-card">
+        <i class="fas fa-shield-check"></i>
+        <h3>Detection Rate</h3>
+        <p>99.7%</p>
+    </div>
+    <div class="stat-card">
+        <i class="fas fa-clock-rotate-left"></i>
+        <h3>Last Scan</h3>
+        <p id="lastScan">2.5 Minutes ago</p>
+    </div>
+</section>
+
+        <div id="sfczfttejm2xlyq8f33sdgkz144arp5yt73"></div>
+        <noscript>
+            <a href="https://www.freecounterstat.com" title="hit counter">
+                <img src="https://counter4.optistats.ovh/private/freecounterstat.php?c=zfttejm2xlyq8f33sdgkz144arp5yt73" border="0" title="hit counter" alt="hit counter">
+            </a>
+        </noscript>
+    </div>
+  
+</section>
+
+<!-- New Footer Section -->
+<footer class="modern-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4 class="footer-title">Keylogger Defense</h4>
+            <p class="footer-text">Protecting your digital life since 2021</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-list">
+                <li><a href="/detection">Detection</a></li>
+                <li><a href="/about_us">About Us</a></li>
+                <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4 class="footer-title">Contact</h4>
+            <ul class="footer-list">
+                <li><i class="fas fa-envelope"></i> keydefender2021@gmail.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> Pakistan</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p class="copyright">&copy; 2021 Keylogger Defense. All rights reserved.</p>
+        <div class="legal-links">
+            <a href="{% url 'privacy' %}">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/luxon"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon"></script>
+<!-- New counter script -->
+<script type="text/javascript" src="https://counter4.optistats.ovh/private/counter.js?c=zfttejm2xlyq8f33sdgkz144arp5yt73&down=async" async></script>
+
+<script>
+    let visitorChart = null;
+    
+    async function loadChartData() {
+        try {
+            const response = await fetch('/api/recent-visits/');
+            const data = await response.json();
+            
+            // Format dates
+            const formattedDates = data.dates.map(date => 
+                new Date(date).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric'
+                })
+            );
+
+            // Update visit list
+            const visitList = document.getElementById('visitDates');
+            visitList.innerHTML = formattedDates.map((date, index) => 
+                `<li>
+                    <span class="date">${date}</span>
+                    <span class="count">${data.counts[index]}</span>
+                </li>`
+            ).join('');
+
+            // Initialize or update chart
+            const ctx = document.getElementById('visitorChart').getContext('2d');
+            if(visitorChart) visitorChart.destroy();
+            
+            visitorChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: formattedDates.reverse(),
+                    datasets: [{
+                        label: 'Daily Visitors',
+                        data: data.counts.reverse(),
+                        backgroundColor: '#2A2A72',
+                        borderColor: '#009FFD',
+                        borderWidth: 2,
+                        borderRadius: 4,
+                        hoverBackgroundColor: '#FF0076'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#666' }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#f5f5f5' },
+                            ticks: { color: '#666' }
+                        }
+                    }
+                }
+            });
+            
+        } catch (error) {
+            console.error('Error loading chart data:', error);
+        }
+    }
+
+    // Initial load
+    document.addEventListener('DOMContentLoaded', () => {
+        loadChartData();
+        setInterval(loadChartData, 30000);
+    });
+</script>
+{% endblock %}

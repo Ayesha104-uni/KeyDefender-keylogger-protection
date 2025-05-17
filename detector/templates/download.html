@@ -1,0 +1,65 @@
+<!-- download.html -->
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="slogger-container">
+        <div class="slogger-main">
+            <!-- Hero Section -->
+            <section class="slogger-hero">
+                <h1 style="font-size: 3rem; margin-bottom: 1.5rem;">KeyDefender v2.0</h1>
+                <p style="font-size: 1.2rem; opacity: 0.9;">Enterprise-grade Keylogger Detection & Prevention</p>
+                
+                <!-- Stats Counter -->
+                <div class="slogger-stats">
+                    <div class="slogger-stat-item">
+                        <div style="font-size: 2.5rem; font-weight: bold;">500K+</div>
+                        <div>Protected Systems</div>
+                    </div>
+                    <div class="slogger-stat-item">
+                        <div style="font-size: 2.5rem; font-weight: bold;">99.7%</div>
+                        <div>Detection Rate</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Feature Grid -->
+            <div class="slogger-feature-grid">
+                <div class="slogger-feature-card">
+                    <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--slogger-primary); margin-bottom: 1rem;"></i>
+                    <h2>Real-time Protection</h2>
+                    <p>Continuous monitoring of system activities with instant threat neutralization</p>
+                </div>
+                
+                <div class="slogger-feature-card">
+                    <i class="fas fa-brain" style="font-size: 2rem; color: var(--slogger-primary); margin-bottom: 1rem;"></i>
+                    <h2>AI-Powered Detection</h2>
+                    <p>Machine learning algorithms for zero-day threat detection</p>
+                </div>
+            </div>
+
+            <!-- Download Section -->
+            <div class="slogger-download-section">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Get Protected Now</h2>
+                    <p style="opacity: 0.8;">Download our premium security suite</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <a href="https://drive.google.com/file/d/1Y5pKzi0g00DuTK-sX0cOAS6RYkwSqq9n/view?usp=drive_link" class="slogger-download-btn">
+                        <i class="fas fa-download"></i>
+                        Download SecureLogger (v2.0 - 128MB)
+                    </a>
+                    <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">
+                        Windows 10/11 • macOS 10.15+ • Linux
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Badge -->
+            <div class="slogger-security-badge">
+                <i class="fas fa-lock"></i> SSL Encrypted Download
+            </div>
+        </div>
+    </div>
+{% endblock %}

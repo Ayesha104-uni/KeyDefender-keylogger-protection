@@ -1,0 +1,83 @@
+<!-- Add this in your home.html content block -->
+ {% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="about-section">
+    <div class="about-container">
+        <!-- Hero Section -->
+        <div class="about-hero">
+            <h2 class="section-title">Protecting Digital Lives with Cutting-Edge Security</h2>
+            <p class="section-subtitle">Since 2021, we've been at the forefront of keylogger detection technology</p>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="about-grid">
+            <!-- Mission Card -->
+            <article class="about-card mission-card">
+                <div class="card-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Our Mission</h3>
+                <p>Empowering users with real-time protection against evolving keylogger threats through innovative machine learning solutions.</p>
+            </article>
+
+            <!-- Team Section -->
+            <div class="team-section">
+                <h3 class="team-heading">Expert Security Team</h3>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <h4>Ayesha Sajeel</h4>
+                    </div>
+                    <div class="team-member">
+                        <h4>Tamseela Falak</h4>
+                    </div>
+                    <div class="team-member">
+                        <h4>Tabinda Ramzan</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-card">
+                <div class="stat-item">
+                    <span class="stat-number">10M+</span>
+                    <span class="stat-label">Protected Users</span>
+                </div>
+               <div class="stat-item">
+                    <span class="stat-number">11M+</span>
+                    <span class="stat-label">Total Scans</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label">Detection Rate</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Values Section -->
+        <div class="values-section">
+            <h3>Our Core Values</h3>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-user-lock"></i>
+                    <h4>Privacy First</h4>
+                    <p>We prioritize user privacy in every decision and product we create.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-brain"></i>
+                    <h4>Continuous Innovation</h4>
+                    <p>Daily updates to stay ahead of emerging threats.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h4>User-Centric</h4>
+                    <p>Solutions designed for real human needs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

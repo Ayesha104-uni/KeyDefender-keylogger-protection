@@ -59,49 +59,71 @@ Live Demo: [https://keydefenderpro.live/](https://keydefenderpro.live/)
 ```bash
 git clone https://github.com/yourusername/key-defender-pro.git
 cd key-defender-pro
-# Installation
+Install dependencies:
 
-2.  Install dependencies:
-```bash
+bash
 npm install
-
 Set up environment variables:
-```bash
+
+bash
 cp .env.example .env
 # Edit the .env file with your configuration
-
 Start the development server:
-```bash
-npm run dev
 
-### Usage
-1.Launch the Key Defender Pro application
-2.Configure your security preferences in the settings panel
-3.Enable protection when entering sensitive information
-4.View security reports in the dashboard
+bash
+npm run dev
+Usage
+Launch the Key Defender Pro application
+
+Configure your security preferences in the settings panel
+
+Enable protection when entering sensitive information
+
+View security reports in the dashboard
+
 For detailed usage instructions, please refer to our User Manual.
 
-### Security Features
+Security Features
 Key Defender Pro employs multiple layers of security:
-1.On-the-fly Encryption: Keystrokes are encrypted before they reach the operating system level
-2.Secure Memory Management: Sensitive data is never stored in plain text
-3.Tamper Protection: Detects and prevents attempts to modify the application
-4.Regular Updates: Security patches and feature updates are delivered automatically
 
-## Contributing
+On-the-fly Encryption: Keystrokes are encrypted before they reach the operating system level
+
+Secure Memory Management: Sensitive data is never stored in plain text
+
+Tamper Protection: Detects and prevents attempts to modify the application
+
+Regular Updates: Security patches and feature updates are delivered automatically
+
+Contributing
 We welcome contributions from the community! Please follow these steps:
-1.Fork the repository
-2.Create your feature branch (git checkout -b feature/AmazingFeature)
-3.Commit your changes (git commit -m 'Add some AmazingFeature')
-4.Push to the branch (git push origin feature/AmazingFeature)
-5.Open a Pull Request
+
+Fork the repository
+
+Create your feature branch:
+
+bash
+git checkout -b feature/AmazingFeature
+Commit your changes:
+
+bash
+git commit -m 'Add some AmazingFeature'
+Push to the branch:
+
+bash
+git push origin feature/AmazingFeature
+Open a Pull Request
+
 Please read our Contribution Guidelines for more details.
 
-## License
+License
 This project is licensed under the GNU General Public License v3.0 - see the LICENSE file for details.
 
-## Support
+Support
 For support, feature requests, or security concerns, please contact us at:
+
 📧 Email: support@keydefenderpro.live
 🐦 Twitter: @KeyDefenderPro
 💬 Discord: Join our Community
+
+Key Defender Pro - Because every keystroke matters.
+© 2023 Key Defender Pro Team. All rights reserved.
